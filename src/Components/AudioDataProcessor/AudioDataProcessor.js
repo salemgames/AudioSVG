@@ -3,29 +3,13 @@ import AudioCSSProcessor from "../../Components/AudioCSSProcessor/AudioCSSProces
 import style from "./AudioDataProcessor.module.css";
 
 const AudioDataProcessor = ({ audio }) => {
-  let analyser;
-  let dataArray;
-  let average;
-
   const [audioValue, setAudioValue] = useState(0);
+  const [audioContext] = useState(
+    new (window.AudioContext || window.webkitAudioContext)()
+  );
+  const [analyser] = useState(audioContext.createAnalyser());
+  const [dataArray] = useState(new Uint8Array(analyser.frequencyBinCount));
 
-  //////// declare Audio Context , create audio Stream
-  useEffect(() => {
-    let audioCTX = new (window.AudioContext || window.webkitAudioContext)();
-    analyser = audioCTX.createAnalyser();
-    analyser.smoothingTimeConstant = 0.8;
-    let source = audioCTX.createMediaStreamSource(audio);
-    source.connect(analyser);
-    dataArray = new Uint8Array(analyser.frequencyBinCount);
-    let rafId = requestAnimationFrame(tick);
-    return () => {
-      cancelAnimationFrame(rafId);
-      analyser.disconnect();
-      source.disconnect();
-    };
-  }, []);
-
-  ///////// set up analyser
   const tick = useCallback(() => {
     analyser.getByteTimeDomainData(dataArray);
     analyser.getByteFrequencyData(dataArray);
@@ -34,18 +18,39 @@ const AudioDataProcessor = ({ audio }) => {
     for (var i = 0; i < length; i++) {
       values += dataArray[i];
     }
-    average = values / length;
+    let average = values / length;
     setAudioValue(average);
-    average = values / length;
     requestAnimationFrame(tick);
-  }, []);
+  }, [analyser, dataArray]);
+
+  useEffect(() => {
+    analyser.smoothingTimeConstant = 0.8;
+    let source = audioContext.createMediaStreamSource(audio);
+    source.connect(analyser);
+    let rafId = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(rafId);
+      analyser.disconnect();
+      source.disconnect();
+    };
+  }, [analyser, audio, audioContext, tick]);
 
   return (
     <>
-      <div className={style.title}>Audio API / SVG interactive online Demo</div>
+      <div className={style.title}>
+        Audio API / SVG interactive online demo
+        <div className={style.sign}>
+          Creative XP coding by Jean-Christophe Deyagère / @ :
+          jcdeyagere@gmail.com
+        </div>
+        <div className={style.sign}>
+          Artwork by Jean-Christophe Deyagère, France, 2020
+        </div>
+      </div>
       <div className={style.audioUI}>
         <p className={style.legend}>
-          Instructions : Clap your hands or make noise to make the hair move.
+          Instructions : Clap your hands, make noise, or sing a song to make the
+          hair move.
         </p>
         <div className={style.audioLevelDisplay}>
           <div>
@@ -53,14 +58,23 @@ const AudioDataProcessor = ({ audio }) => {
             <div className={style.audioValue}>{audioValue}</div>
           </div>
         </div>
-        <p className={style.legend}>
+        <div className={style.legend}>
           Image is an svg file made with{" "}
           <a href="https://inkscape.org/">Inkscape</a> opensource software.
           <p>Hair of the character is divided in 3 main parts.</p>
           Value of audiolevel are send through CSS variables and used in a skew
           transform to deform hair. For example :
-        </p>
-        <p className={style.example}>transform: skew(var(--value3));</p>
+        </div>
+        <div className={style.example}>
+          {" "}
+          In AudioDataProcessor.js : "[...
+          document.body.style.setProperty("--value", audioData / 5 +
+          "deg");...]"
+        </div>
+        <div className={style.example}>
+          {" "}
+          In index.css : "[...transform: skew(var(--value3));...]"
+        </div>
 
         <AudioCSSProcessor audioData={audioValue} />
       </div>

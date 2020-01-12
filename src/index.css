@@ -5,7 +5,7 @@ body {
   font-size: 1em;
   display: grid;
   height: 100%;
-  background: linear-gradient(to right, rgb(115, 122, 124), rgb(61, 77, 95));
+  background: linear-gradient(to right, rgb(115, 122, 124), rgb(26, 41, 58));
 }
 
 .hairMove {
@@ -17,12 +17,14 @@ body {
 .hairMove3 {
   transform: skew(var(--value3));
 }
+.shadows {
+  opacity: var(--value4);
+}
 
 svg {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   position: fixed;
-  /* margin: auto;  */
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -30,4 +32,12 @@ svg {
   clip-path: inset(1vw 1vw 1vw 1vw);
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.footer {
+  bottom: 1em;
+  font-size: 4vw;
+  right: 2em;
+  z-index: -400;
+  color : white;
 }

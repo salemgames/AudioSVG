@@ -6,6 +6,7 @@ const AudioCSSProcessor = ({ audioData }) => {
       document.body.style.setProperty("--value", audioData / 5 + "deg");
       document.body.style.setProperty("--value2", audioData / 8 + "deg");
       document.body.style.setProperty("--value3", audioData / 5 + "deg");
+      document.body.style.setProperty("--value4", audioData / 10);
     }
   };
 
@@ -41,6 +42,7 @@ const AudioCSSProcessor = ({ audioData }) => {
               transform="translate(0 75.75)"
             />
           </g>
+
           <g
             stroke="#000"
             strokeLinejoin="miter"
@@ -56,6 +58,7 @@ const AudioCSSProcessor = ({ audioData }) => {
               display="inline"
               transform="translate(0 75.75)"
             />
+
             <path
               fill="#fca"
               fillOpacity="1"
@@ -68,6 +71,7 @@ const AudioCSSProcessor = ({ audioData }) => {
               display="inline"
               transform="translate(0 75.75)"
             />
+
             <path
               fill="#001"
               fillOpacity="1"
@@ -125,6 +129,48 @@ const AudioCSSProcessor = ({ audioData }) => {
               transform="translate(0 75.75)"
             />
           </g>
+
+          <g className="shadows">
+            <path
+              fill="#000"
+              fillOpacity="1"
+              stroke="#000"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeOpacity="1"
+              strokeWidth="0.265"
+              d="M352.008 168.753s7.908-5.624 13.535-17.517c8.357-17.729 17.43-57.393 3.28-73.062-1.307-1.448-4.05-4.226-4.863-10.767-3.26-13.293-16.092-28.93-43.269-43.302.53-2.123 51.222-20.171 53.61-20.436 2.389-.266 47.876-2.344 52.549 13.535 4.271 5.063 29.665 35.07 27.662 48.29-1.603 12.82-17.141 35.5-23.15 47.919.28 14.085 4.014 40.619 26.042 54.42 15.624 3.606 30.385 2.31 51.737-.213-.25 6.386.996 27.526-.294 42.537-2.224 1.48-7.362.565-8.8.7-15.86-.352-24.263-.912-38.174-1.05-13.606-.134-22.365-23.89-27.327-33.888-6.647-13.183-9.177-23.242-23.019-25.623-15.25-2.623-48.052 15.937-59.52 18.457z"
+              transform="translate(0 75.75)"
+              opacity="0.25"
+            ></path>
+            <path
+              fill="#000"
+              fillOpacity="1"
+              stroke="none"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeOpacity="0"
+              strokeWidth="0.265"
+              d="M317.772 85.946c-.531 5.308.53 15.924 0 19.64-.266 2.92-4.247 11.412-1.593 14.067 2.749 3.482 10.51 5.29 16.455 2.919 7.388-3.32.261-15.658-4.246-20.967-7.962-17.517-10.616-15.66-10.616-15.66z"
+              opacity="0.20"
+              transform="translate(0 75.75)"
+            ></path>
+            <path
+              fill="#000"
+              fillOpacity="1"
+              stroke="none"
+              strokeDasharray="none"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="4"
+              strokeOpacity="0"
+              strokeWidth="0.265"
+              d="M322.678 79.09c.73-7.15 16.626-17.753 26.805-15.393 6.104 1.858 2.654 4.777 2.654 4.777-17.816-1.39-26.51 9.55-23.355 16.455-3.981 1.858-6.104-5.839-6.104-5.839z"
+              opacity="0.4"
+              transform="translate(0 75.75)"
+            ></path>
+          </g>
+
           <path
             fill="#000"
             fillRule="nonzero"
@@ -140,6 +186,7 @@ const AudioCSSProcessor = ({ audioData }) => {
             opacity="1"
             transform="translate(0 75.75) matrix(1.41856 0 0 1.41863 87.407 -87.755)"
           />
+
           <g
             fill="#000"
             strokeLinecap="butt"

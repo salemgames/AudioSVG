@@ -18,11 +18,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {audio ? (
-        <AudioDataProcessor audio={audio} />
-      ) : (
-        "Sorry, no audio signal detected. Check yout webcam or mic setup please :)"
-      )}
+      <div className="controls"></div>
+      {audio ? <AudioDataProcessor audio={audio} /> : ""}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, rgb(115, 122, 124), rgb(61, 77, 95));
+  background: linear-gradient(to right, rgb(115, 122, 124), rgb(39, 56, 77));
 }
 
 .audioLevelDisplay {
@@ -55,6 +55,7 @@ body {
   font-weight: bolder;
   color: rgb(32, 34, 41);
   white-space: nowrap;
+  text-decoration: underline;
 }
 
 a {
@@ -64,4 +65,8 @@ a {
   font-style: italic;
   color: rgb(117, 134, 182);
   text-shadow: 1px 1px 5px black;
+}
+
+.sign {
+  font-size: 0.6vw;
 }
