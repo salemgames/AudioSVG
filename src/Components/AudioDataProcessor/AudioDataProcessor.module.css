@@ -1,0 +1,67 @@
+body {
+  background: linear-gradient(to right, rgb(115, 122, 124), rgb(61, 77, 95));
+}
+
+.audioLevelDisplay {
+  font-size: 1vw;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.audioLevelDisplay span {
+  font-size: 1vw;
+  font-weight: bolder;
+  color: rgb(117, 134, 182);
+  text-shadow: 1px 1px 5px black;
+}
+
+.legend {
+  font-size: 1vw;
+  margin-top: 1em;
+  font-weight: 900;
+  font-weight: bolder;
+}
+
+.example {
+  font-size: 1vw;
+  margin-top: 1em;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.audioUI {
+  left: 2em;
+  margin-top: 3em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  z-index: 45;
+}
+
+.audioValue {
+  font-size: 3vw;
+  font-weight: bolder;
+  color: rgb(117, 134, 182);
+  text-shadow: 1px 1px 5px black;
+}
+
+.title {
+  margin-top: 2.5vw;
+  margin-left: 2vw;
+  padding: 0.2vw;
+  top: 1em;
+  font-size: 2vw;
+  font-weight: bolder;
+  color: rgb(32, 34, 41);
+  white-space: nowrap;
+}
+
+a {
+  font-size: 1.2vw;
+  margin-top: 1em;
+  font-weight: 900;
+  font-style: italic;
+  color: rgb(117, 134, 182);
+  text-shadow: 1px 1px 5px black;
+}

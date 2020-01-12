@@ -1,2 +1,0 @@
-# AudioSVG
-Created with CodeSandbox
