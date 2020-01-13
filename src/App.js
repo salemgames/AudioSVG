@@ -23,7 +23,8 @@ const App = () => {
       ) : (
         <div className="errorMessage">
           Sorry, no audio input signal detected. Please check your webcam or mic
-          setup. :)
+          setup and refresh browser page (F5) :)
+          Contact : jcdeyagere@gmail.com
         </div>
       )}
     </div>
