@@ -4,9 +4,10 @@
     "contact": "Creative XP coding by Jean-Christophe Deyagère / @ :jcdeyagere@gmail.com",
     "signature": "Artwork by Jean-Christophe Deyagère, France, 2020",
     "legend": "Instructions : Clap your hands, make noise, or sing a song to make the hair move.",
-    "AudioInputValueLabel": "Audio Input Value from AudioDataProcessor.js file:",
-    "link": "https://inkscape.org/",
-    "inkscape": "Inkscape",
+    "AudioInputValueLabel": "Audio Input Value from AudioDataProcessor.tsx file:",
+    "imageIsDoneWith": "Image is an svg file made with ",
+    "inkscapeUrl": "https://inkscape.org/",
+    "inkscape": "Inkscape opensource software",
     "graphicDescription": "Hair of the character is divided in 3 main parts.",
-    "processDescription": "Value of audiolevel are send through CSS variables and used in a skew transform to deform hair. For example :"
+    "processDescription": "Avarage value of audio input signal is sent to CSS variables and used in a skew transform to deform hair."
 }

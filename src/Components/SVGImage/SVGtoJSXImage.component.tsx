@@ -1,10 +1,6 @@
 import React from "react";
 
-interface Props {
-  audioData: number;
-}
-
-const SVGtoJSXImage: React.FC<Props> = (props) => {
+const SVGtoJSXImage: React.FC = () => {
   return (
     <>
       <div>

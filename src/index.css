@@ -24,7 +24,7 @@ body {
 svg {
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
