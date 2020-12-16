@@ -4,7 +4,7 @@
     "contact": "Creative XP coding by Jean-Christophe Deyagère / @ :jcdeyagere@gmail.com",
     "signature": "Artwork by Jean-Christophe Deyagère, France, 2020",
     "legend": "Instructions : Clap your hands, make noise, or sing a song to make the hair move.",
-    "AudioInputValueLabel": "Audio Input Value from AudioDataProcessor.tsx file:",
+    "AudioInputValueLabel": "Audio Input Value from AudioDataProcessor.tsx file:  ",
     "imageIsDoneWith": "Image is an svg file made with ",
     "inkscapeUrl": "https://inkscape.org/",
     "inkscape": "Inkscape opensource software",

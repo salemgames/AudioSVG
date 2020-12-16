@@ -30,14 +30,14 @@ export const LegendDiv = styled.div`
 `;
 
 export const AudioValueIndicator = styled.div`
+  padding-left: 1rem;
   font-weight: bolder;
-  color: rgb(117, 134, 182);
+  color: rgb(255, 0, 179);
+  text-shadow: black 0.1em;
 `;
 
 export const TitleDiv = styled.div`
-  margin-top: 2.5vw;
-  margin-left: 2vw;
-  padding: 0.2vw;
+  padding: 0.2rem;
   top: 1em;
   font-weight: bolder;
   color: rgb(32, 34, 41);
