@@ -32,8 +32,9 @@ export const LegendDiv = styled.div`
 export const AudioValueIndicator = styled.div`
   padding-left: 1rem;
   font-weight: bolder;
-  color: rgb(255, 0, 179);
+  color: rgb(54, 54, 54);
   text-shadow: black 0.1em;
+  font-size: 2rem;
 `;
 
 export const TitleDiv = styled.div`
@@ -43,6 +44,7 @@ export const TitleDiv = styled.div`
   color: rgb(32, 34, 41);
   white-space: nowrap;
   text-decoration: underline;
+  padding-bottom: 2rem;
 `;
 
 export const SignatureDiv = styled.div`

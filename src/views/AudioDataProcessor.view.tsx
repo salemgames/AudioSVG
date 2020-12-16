@@ -35,10 +35,10 @@ const AudioDataProcessorView: React.FC<Props> = (props) => {
             <SignatureDiv>{textAssets.signature}</SignatureDiv>
             <LegendDiv>{textAssets.legend}</LegendDiv>
             <LegendDiv>
-              <AudioLevelMeter>
-                <LabelText>{textAssets.AudioInputValueLabel}</LabelText>
-                <AudioValueIndicator>{audioValue}</AudioValueIndicator>
-              </AudioLevelMeter>
+              <LabelText>{textAssets.AudioInputValueLabel}</LabelText>
+            </LegendDiv>
+            <LegendDiv>
+              <AudioValueIndicator>{audioValue}</AudioValueIndicator>
             </LegendDiv>
             <LegendDiv>
               {textAssets.imageIsDoneWith}
