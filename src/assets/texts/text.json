@@ -1,0 +1,12 @@
+{
+    "errorMessage": "Sorry, no audio input signal detected. Please check your webcam or mic setup and refresh browser page (F5) :) Contact : jcdeyagere@gmail.com",
+    "mainTitle": "Audio API / SVG interactive online demo",
+    "contact": "Creative XP coding by Jean-Christophe Deyagère / @ :jcdeyagere@gmail.com",
+    "signature": "Artwork by Jean-Christophe Deyagère, France, 2020",
+    "legend": "Instructions : Clap your hands, make noise, or sing a song to make the hair move.",
+    "AudioInputValueLabel": "Audio Input Value from AudioDataProcessor.js file:",
+    "link": "https://inkscape.org/",
+    "inkscape": "Inkscape",
+    "graphicDescription": "Hair of the character is divided in 3 main parts.",
+    "processDescription": "Value of audiolevel are send through CSS variables and used in a skew transform to deform hair. For example :"
+}

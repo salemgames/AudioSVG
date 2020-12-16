@@ -15,7 +15,7 @@ interface Props {
   audio: MediaStream;
 }
 
-const AudioDataProcessor: React.FC<Props & Window> = (props) => {
+const AudioDataProcessor: React.FC<Props> = (props) => {
   const [audioValue, setAudioValue] = useState(0);
   const [audioContext] = useState(
     new (window.AudioContext || window.process.env.REACT_APP_AUDIO_WEBKIT)()
