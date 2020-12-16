@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 
-const AudioCSSProcessor = ({ audioData }) => {
+interface Props {
+  audioData: number;
+}
+
+const AudioCSSProcessor: React.FC<Props> = (props) => {
   const listen = () => {
-    if (audioData) {
-      document.body.style.setProperty("--value", audioData / 5 + "deg");
-      document.body.style.setProperty("--value2", audioData / 8 + "deg");
-      document.body.style.setProperty("--value3", audioData / 5 + "deg");
-      document.body.style.setProperty("--value4", audioData / 10);
+    if (props.audioData) {
+      document.body.style.setProperty("--value", props.audioData / 5 + "deg");
+      document.body.style.setProperty("--value2", props.audioData / 8 + "deg");
+      document.body.style.setProperty("--value3", props.audioData / 5 + "deg");
+      document.body.style.setProperty("--value4", props.audioData / 10 + "");
     }
   };
 
   useEffect(() => {
     listen();
-  });
+  }, [props.audioData]);
 
   return (
     <>
