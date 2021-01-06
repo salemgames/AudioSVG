@@ -13,7 +13,7 @@ interface Props {
 
 const AudioDataProcessor: React.FC<Props> = (props) => {
   const [audioValue, setAudioValue] = useState<number>(0);
-  const getAudioAvarageFrequencyValue = useCallback(() => {
+  const getAudioAverageFrequencyValue = useCallback(() => {
     if (props.sendAvarageAudioValue !== undefined) {
       props.sendAvarageAudioValue(
         audioContextFrequenciesProcessing(
@@ -28,14 +28,14 @@ const AudioDataProcessor: React.FC<Props> = (props) => {
         frequenciesUint8Array
       )
     );
-    requestAnimationFrame(getAudioAvarageFrequencyValue);
+    requestAnimationFrame(getAudioAverageFrequencyValue);
   }, [audioValue]);
 
   useEffect(() => {
     audioContextAnalyser.smoothingTimeConstant = 0.8;
     let source = audioContext.createMediaStreamSource(props.audioInputMic);
     source.connect(audioContextAnalyser);
-    let rafId = requestAnimationFrame(getAudioAvarageFrequencyValue);
+    let rafId = requestAnimationFrame(getAudioAverageFrequencyValue);
     return () => {
       cancelAnimationFrame(rafId);
       audioContextAnalyser.disconnect();
