@@ -3,17 +3,17 @@ import AudioDataProcessorView from "./views/AudioDataProcessor.view";
 
 const App: React.FC = () => {
   const [audioMicSignal, setAudio] = useState<MediaStream>();
-  useEffect(() => {
-    getMicrophone();
-  }, []);
-
-  const getMicrophone = async () => {
+    const getMicrophone = async () => {
     const audioMicSignal = await navigator.mediaDevices.getUserMedia({
       audio: true,
       video: false,
     });
     setAudio(audioMicSignal);
   };
+  useEffect(() => {
+    getMicrophone();
+  }, []);
+
 
   return (
     <div>
